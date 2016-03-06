@@ -1,0 +1,23 @@
+
+{
+	"links": [
+	
+	{
+	  "imgSrc": "assets/dario_urzay_2009_005.jpg",
+	  "dataTarget": "#videoModal",
+	  "dataMedia":"assets/01.mp4"
+	},
+	
+	{
+	  "imgSrc": "assets/dario_urzay_Phaistos_001.jpg",
+	  "dataTarget": "#deleteProductModal",
+	  "dataMedia":"assets/dario_urzay_Phaistos_001.jpg"
+	},
+	{
+	  "imgSrc": "assets/dario_urzay_2009_006.jpg",
+	  "dataTarget": "#videoModal",
+	  "dataMedia":"assets/proyeccion_sala_Custom_003.mp4"
+	}
+	
+	]
+}
