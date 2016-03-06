@@ -1,1 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
+.idea/*.xml
+**/.idea/mediaGrid.iml
+**/.idea/vcs.xml
+node_modules
+bower_componets
+
+.tmp
