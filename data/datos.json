@@ -3,20 +3,20 @@
 	"links": [
 	
 	{
-	  "imgSrc": "assets/dario_urzay_2009_005.jpg",
+	  "imgSrc": "assets/22258872673_a653ba9458_z.jpg",
 	  "dataTarget": "#videoModal",
-	  "dataMedia":"assets/01.mp4"
+	  "dataMedia":"assets/Clouds and Blue Sky (HD).mp4"
 	},
 	
 	{
-	  "imgSrc": "assets/dario_urzay_Phaistos_001.jpg",
-	  "dataTarget": "#deleteProductModal",
-	  "dataMedia":"assets/dario_urzay_Phaistos_001.jpg"
+	  "imgSrc": "assets/24939768603_6d974ede88_z.jpg",
+	  "dataTarget": "#photoModal",
+	  "dataMedia":"assets/24939768603_6d974ede88_z.jpg"
 	},
 	{
-	  "imgSrc": "assets/dario_urzay_2009_006.jpg",
+	  "imgSrc": "assets/25540423956_9336ac2d58_z.jpg",
 	  "dataTarget": "#videoModal",
-	  "dataMedia":"assets/proyeccion_sala_Custom_003.mp4"
+	  "dataMedia":"assets/Sunset in 1080p HD CC-By NatureClip.mp4"
 	}
 	
 	]
