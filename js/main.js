@@ -1,80 +1,89 @@
+/**
+ * Created by juanmanuelsanchez on 11/3/16.
+ */
 (function() {
 
 
-	
-	
-	var MediaGrid = function (data) {
-
-      this.objectSrc = ko.observable(data.imgSrc);
-      this.objectTarget = ko.observable(data.dataTarget);
-      this.objectMediaType = ko.observable(data.dataMedia);
-
-	};
-	
-	
-	var AppViewModel = function () {
-		
-		var self = this,
-		    datos = "data/datos.json";
-            this.links = ko.observableArray([]);
 
 
-		
-		function getData(callback) {
-			
-			
-			$.getJSON(datos, function(data) {
-				
-				callback(data);
-				
-				
-			}).error(function (e) {
-				
-				console.log("Sorry, data cannot be loaded!");
-				
-				
-			});
-			
-			return false;
-				
-		}
-		
-		getData(function (data) {
-			
-			var linksItems= data['links'];
-				
-		    //console.log(linksItems);
+  var MediaLink = function (data) {
 
 
-          linksItems.forEach(function (linkItem) {
+    this.rowName = ko.observable(data.rowName);
+    this.rowItems = ko.observable(data.rowItems);
+    this.elementTitle = ko.observable(data.rowItems.elementTitle);
+    this.imgSrc = ko.observable(data.rowItems.imgSrc);
+    this.dataTarget = ko.observable(data.rowItems.dataTarget);
+    this.dataMedia = ko.observable(data.rowItems.dataMedia);
 
-            self.links.push(new MediaGrid(linkItem));
+    console.log(this.rowItems());
 
-          });
-
-          console.log(self.links());
-			
-			
-			
-		});
+  };
 
 
-		
-		
-	};
-	
-	  window.addEventListener("load", function (event) {
-	 
-	 trigger();
-	  
+  var AppViewModel = function () {
+
+    var self = this,
+        datos = "data/datos.json";
+
+
+
+
+    function getData(callback) {
+
+
+      $.getJSON(datos, function(data) {
+
+        callback(data);
+
+
+      }).error(function (e) {
+
+        console.log("Sorry, data cannot be loaded!");
+
+
+      });
+
+      return false;
+
+    }
+
+    getData(function (data) {
+
+      var links = [],
+      links= data['links'];
+
+
+
+      links.forEach(function (item) {
+
+        self.rows.push(new MediaLink(item));
+
+      });
+
+      console.log(self.rows());
+
+
+    });
+
+    this.rows = ko.observableArray([]);
+
+
+
+  };
+
+  window.addEventListener("load", function (event) {
+
+    trigger();
+
   });
-	
-	
-	
-	ko.applyBindings(new AppViewModel());
-	
+
+
+
+  ko.applyBindings(new AppViewModel());
+
 }());
 
 
-      
-      
+
+

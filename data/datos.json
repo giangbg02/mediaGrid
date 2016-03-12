@@ -1,23 +1,59 @@
 
 {
-	"links": [
-	
-	{
-	  "imgSrc": "assets/22258872673_a653ba9458_z.jpg",
-	  "dataTarget": "#videoModal",
-	  "dataMedia":"assets/Clouds and Blue Sky (HD).mp4"
-	},
-	
-	{
-	  "imgSrc": "assets/24939768603_6d974ede88_z.jpg",
-	  "dataTarget": "#photoModal",
-	  "dataMedia":"assets/24939768603_6d974ede88_z.jpg"
-	},
-	{
-	  "imgSrc": "assets/25540423956_9336ac2d58_z.jpg",
-	  "dataTarget": "#videoModal",
-	  "dataMedia":"assets/Sunset in 1080p HD CC-By NatureClip.mp4"
-	}
-	
-	]
+  "links": [
+
+    {
+      "rowName":"name1",
+      "rowItems": [
+
+        {
+          "elementTitle": "title1",
+          "imgSrc": "assets/22258872673_a653ba9458_z.jpg",
+          "dataTarget": "#videoModal",
+          "dataMedia":"assets/Clouds and Blue Sky (HD).mp4"
+        },
+
+        {
+          "elementTitle": "title2",
+          "imgSrc": "assets/22473398326_330e439d24_z.jpg",
+          "dataTarget": "#photoModal",
+          "dataMedia":"assets/22473398326_330e439d24_z.jpg"
+        },
+        {
+          "elementTitle": "title3",
+          "imgSrc": "assets/23016037640_a38cf63c9d_z.jpg",
+          "dataTarget": "#videoModal",
+          "dataMedia":"assets/Dandelion blown (Macro HD).mp4"
+        }
+
+      ]
+    },
+    {
+      "rowName":"name2",
+      "rowItems": [
+
+        {
+          "elementTitle": "title4",
+          "imgSrc": "assets/24935964784_4f32eac764_z.jpg",
+          "dataTarget": "#videoModal",
+          "dataMedia":"assets/Fire and Embers in 4K.mp4"
+        },
+        {
+          "elementTitle": "title5",
+          "imgSrc": "assets/24939768603_6d974ede88_z.jpg",
+          "dataTarget": "#photoModal",
+          "dataMedia":"assets/24939768603_6d974ede88_z.jpg"
+        },
+        {
+          "elementTitle": "title6",
+          "imgSrc": "assets/25540423956_9336ac2d58_z.jpg",
+          "dataTarget": "#videoModal",
+          "dataMedia":"assets/Sunset in 1080p HD CC-By NatureClip.mp4"
+        }
+
+      ]
+    }
+
+  ]
+
 }

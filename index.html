@@ -19,7 +19,7 @@
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <!-- jwPlayer-->
   <script src="bower_components/jwplayer/dist/jwplayer.js"></script>
-  <!--WARNING: free jwplayer license key needed; sign up at https://www.jwplayer.com/sign-up/-->
+  <!--WARNING: JWPlayer free license key is needed too run the program see prerequisites on README.md for details-->
   <script>jwplayer.key="";</script>
 
 </head>
@@ -95,85 +95,40 @@
         </script>
       </div>
     </div>
-
-    <!--Thumbnail's grid to trigger modals-->
-    <div class="row col-lg-12 col-md-12 col-sm-12">
-
-      <!--01 Hard coded div-->
-
-      <!--<div class="text-justify main">-->
-      <!--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 mediaHolder">
-          <img src="assets/dario_urzay_2009_005.jpg" alt="work image" class="modalLink" href="#" data-toggle= "modal" data-target="#videoModal" data-media="assets/01.mp4">
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 mediaHolder">
-          <img src="assets/dario_urzay_Phaistos_001.jpg" alt="work image" class="modalLink" href="#" data-toggle= "modal" data-target="#deleteProductModal" data-media="assets/dario_urzay_Phaistos_001.jpg">
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 mediaHolder">
-          <img src="assets/dario_urzay_2009_006.jpg" alt="work image" class="modalLink" href="#" data-toggle= "modal" data-target="#videoModal" data-media="assets/proyeccion_sala_Custom_003.mp4">
-      </div>
-  </div>-->
-
-      <!--End of Hard coded div-->
-
-      <!--02 KnockoutJS-->
-      <div class="text-justify main" data-bind="foreach: links">
-        <!--Thumbnails to trigger modal-->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 mediaHolder">
-          <img src="" alt="work image" class="modalLink" href="#" data-toggle= "modal" data-target="" data-media="" data-bind="attr: {src: objectSrc, 'data-target': objectTarget, 'data-media': objectMediaType}">
-        </div>
-      </div>
-
-      <!--03 VanillaJS-->
-      <!--<div class="text-justify main" id="mediaWrapper">
-      </div>-->
-
-      <!--End of VanillaJS; see note below for the script tag-->
-    </div>
-    <!-- Modal for the video-->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-          </div>
-          <div class="modal-body" id="mySecondVideo">
-            <script type="text/javascript">
-              var playerInstanceModal = jwplayer("mySecondVideo");
-              playerInstanceModal.setup({
-
-                file: "assets/Clouds and Blue Sky (HD).mp4",
-                width: "100%",
-                aspectratio: "16:9",
-                title : 'Video Embed inside a modal',
-                description: 'A video with a basic title and description',
-                mediaid: '02'
-              });
-            </script>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+    <!--01 KnockoutJS-->
+    <!--Thumbnail's grid with title to trigger modals-->
+    <div class="media-grid">
+      <div class="row col-lg-12 col-md-12 col-sm-12 main" data-bind="foreach: rows">
+        <h3 class="text-center row-title" data-bind="text: rowName"></h3>
+        <div class="row col-lg-12 col-md-12 col-sm-12 mediaHolder">
+          <div  class="" data-bind="foreach: rowItems">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <img src="" alt="work image" class="modalLink" href="#" data-toggle= "modal" data-target="" data-media="" data-bind="attr: {src: imgSrc, 'data-target': dataTarget, 'data-media': dataMedia}">
+              <div class="image-title text-center" data-bind="html: elementTitle"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Modal for photo-->
-    <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          </div>
-          <div class="modal-body" id="modalBody">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger">Close</button>
+    <!--Thumbnail's grid without title to trigger modals-->
+    <!--<div class="media-grid">
+      <div class="row col-lg-12 col-md-12 col-sm-12 main" data-bind="foreach: rows">
+        <h3 class="text-center row-title" data-bind="text: rowName"></h3>
+        <div class="mediaHolder col-lg-12 col-md-12 col-sm-12">
+          <div data-bind="foreach: rowItems">
+            <img src="" alt="work image" class="modalLink col-lg-4 col-md-4 col-sm-4 col-xs-12" href="#" data-toggle= "modal" data-target="" data-media="" data-bind="attr: {src: imgSrc, 'data-target': dataTarget, 'data-media': dataMedia}">
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
+    </div>-->
+
+
+    <!--02 VanillaJS-->
+    <!--<div class="text-justify main" id="mediaWrapper">
+    </div>-->
+    <!--End of VanillaJS; see note below for the script tag-->
+
+    <div class="row" id="buttonRow">
       <div class="col-sm-4 text-center">
         <h4>Adding <strong>Buttons</strong></h4>
         <p>Quickly add buttons to your page by using the button component in the insert panel. </p>
@@ -202,6 +157,49 @@
       </div>
     </div>
     <hr>
+  </div>
+</div>
+<!-- Modal for the video-->
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body" id="mySecondVideo">
+        <script type="text/javascript">
+          var playerInstanceModal = jwplayer("mySecondVideo");
+          playerInstanceModal.setup({
+
+            file: "assets/Clouds and Blue Sky (HD).mp4",
+            width: "100%",
+            aspectratio: "16:9",
+            title : 'Video Embed inside a modal',
+            description: 'A video with a basic title and description',
+            mediaid: '02'
+          });
+        </script>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal for photo-->
+<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body" id="modalBody">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
 <script src="bower_components/knockout/dist/knockout.js"></script>
