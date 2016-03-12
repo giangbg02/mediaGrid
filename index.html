@@ -103,8 +103,8 @@
         <div class="row col-lg-12 col-md-12 col-sm-12 mediaHolder">
           <div  class="" data-bind="foreach: rowItems">
             <div class="col-lg-4 col-md-4 col-sm-4">
-              <img src="" alt="work image" class="modalLink" href="#" data-toggle= "modal" data-target="" data-media="" data-bind="attr: {src: imgSrc, 'data-target': dataTarget, 'data-media': dataMedia}">
-              <div class="image-title text-center" data-bind="html: elementTitle"></div>
+              <img src="" alt="work image" class="modalLink" href="#" data-toggle= "modal" data-title="" data-target="" data-media="" data-bind="attr: {src: imgSrc, 'data-title': elementTitle, 'data-target': dataTarget, 'data-media': dataMedia}">
+              <div class="image-title" data-bind="html: elementTitle"></div>
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <div id="modalHeaderTitleVideo"></div>
       </div>
       <div class="modal-body" id="mySecondVideo">
         <script type="text/javascript">
@@ -193,6 +193,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div id="modalHeaderTitle"></div>
       </div>
       <div class="modal-body" id="modalBody">
       </div>
@@ -204,6 +205,7 @@
 </div>
 <script src="bower_components/knockout/dist/knockout.js"></script>
 <script src="js/main.js"></script>
+
 <!--script tag for vanilla js-->
 <!--<script src="js/app.js"></script>-->
 
@@ -213,13 +215,18 @@
   //This function must be in html because 'jwplayer' is referenced here
   function trigger () {
     var trigger = $("body").find('.modalLink');
-    trigger.click(function () {
+    trigger.click(function (event) {
 
       var attribute = $(this).attr('data-target');
+      var modalHeaderTitleVideo = $('#modalHeaderTitleVideo');
       console.log(attribute);
       if(attribute === "#videoModal") {
 
+        modalHeaderTitleVideo.html("");
         var vid = $(this).attr('data-media');
+        var text = $(this).attr('data-title');
+        modalHeaderTitleVideo.text(text);
+        console.log(text);
         console.log(vid);
         jwplayer(1).load([{ file: vid }]);
         jwplayer(1).play();
@@ -229,11 +236,16 @@
         $('#photoModal').on('show.bs.modal', function (event) {
 
           var modalBody = $('#modalBody');
+          var modalHeaderTitle = $('#modalHeaderTitle');
           modalBody.html("");
+          modalHeaderTitle.html("");
           $('#photoModal').removeData('bs.modal');
           var thumbNail = $(event.relatedTarget);
           var imageSrc = thumbNail.data('media');
+          var text = thumbNail.data('title');
           var image = "<img  class='img-responsive' id='modalPhoto' src='"+imageSrc+"'>";
+          modalHeaderTitle.text(text);
+
           modalBody.append(image);
         });
 

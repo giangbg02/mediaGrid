@@ -11,7 +11,6 @@ body {
 
 .image-title {
 
-  font-size: 1.5em;
   margin-top: 1%;
 }
 
@@ -42,7 +41,12 @@ body {
   max-height: 100%;
 }
 
+.image-title, #modalHeaderTitle,
+#modalHeaderTitleVideo{
 
+  font-size: 1.5em;
+  text-align: center;
+}
 
 
 .row #myVideo {
