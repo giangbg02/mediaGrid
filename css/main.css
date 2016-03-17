@@ -33,7 +33,6 @@ body {
 }
 
 
-
 .modalLink {
 
   cursor:pointer;
@@ -59,17 +58,12 @@ body {
 }
 
 
-#buttonRow {
-
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-
 #modalPhoto {
 	
 	margin: 0 auto;
 }
+
+
 
 #mySecondVideo {
 	
@@ -95,16 +89,12 @@ body {
 @media screen and (min-width: 375px) {
 
 
-	
 }
 
 @media screen and (min-width: 410px) {
 
 
-
-	
 }
-
 
 
 @media screen and (min-width:670px){
