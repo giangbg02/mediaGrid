@@ -38,7 +38,7 @@
    
 ## 5.- Packages
    -------------
-   `mediaGrid`folder contains the development version of the program.
+   **mediaGrid** folder contains the development version of the program.
    
    
 ## 6.- Dependencies
@@ -64,6 +64,9 @@
    2) Dandelion blown (Macro HD).mp4.
    3) Fire and Embers in 4K.mp4.
    4) Sunset in 1080p HD CC-By NatureClip.mp4.
+   
+   
+   To my family
   
 
 
