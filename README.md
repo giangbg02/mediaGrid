@@ -34,6 +34,10 @@
    Follow ## 2 and ## 3 1) explanations and reuse code as desired, but 
    remember that **mediaGrid** is under MIT License: observe the specifications
    related to the copyright outlined at LICENSE file.
+   **mediaGrid** is a data driven program. To increase the number of rows and
+   media instances, add more assets and declare them in datos.json. Specify what kind
+   of modal is going to be displayed, `#videoModal` or `#photoModal` on the 
+   `dataTarget` property.
    
    
 ## 5.- Packages
