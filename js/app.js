@@ -73,8 +73,8 @@
             src = element['imgSrc'],
             target = element['dataTarget'],
             media = element['dataMedia'],
-            domLinkDiv = "<div class='col-lg-4 col-md-4 col-sm-4' id='linkItem"+count+"'></div>",
-            domLink = "<img src='"+src+"' alt='work image' class='modalLink' href= '#' data-toggle='modal' data-target='"+target+"' data-media='"+media+"'>",
+            domLinkDiv = "<div class='col-lg-4 col-md-4 col-sm-4 col-xs-12' id='linkItem"+count+"'></div>",
+            domLink = "<img src='"+src+"' alt='work image' class='img-responsive modalLink' href= '#' data-toggle='modal' data-target='"+target+"' data-media='"+media+"'>",
             imageTitle = "<div class='image-title' id='imageTitle"+count+"'></div>";
         var $mediaHolder = $('#'+'mediaHolder'+i);
         $mediaHolder.append(domLinkDiv);
